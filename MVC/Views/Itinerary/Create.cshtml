@@ -1,0 +1,40 @@
+﻿@model MVC.Models.ItinaryItem
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@Html.ValidationSummary(true)
+<div class="editor">
+    @using (Html.BeginForm())
+    {
+        <p>
+            @Html.LabelFor(m => m.Description)
+            @Html.EditorFor(m => m.Description)
+            @Html.ValidationMessageFor(m => m.Description)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.When)
+            @Html.EditorFor(m => m.When)
+            @Html.ValidationMessageFor(m => m.When)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Duration)
+            @Html.EditorFor(m => m.Duration)
+            @Html.ValidationMessageFor(m => m.Duration)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.isActive)
+            @Html.EditorFor(m => m.isActive)
+            @Html.ValidationMessageFor(m => m.isActive)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Confirmed)
+            @Html.EditorFor(m => m.Confirmed)
+            @Html.ValidationMessageFor(m => m.Confirmed)
+        </p>
+        <p><input type="submit" value="Save" /></p>
+    }
+</div>
+
